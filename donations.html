@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-waste Innovations - Sustainable E-Waste Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        function showWarning() {
+            document.getElementById('warning-message').style.display = 'block';
+        }
+        function selectButton(button, groupClass) {
+           
+            const buttons = document.querySelectorAll(`.${groupClass} button`);
+            buttons.forEach(btn => btn.classList.remove('selected'));
+    
+            button.classList.add('selected');
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="guide.html" >Sustainable E-Waste Guide</a></li>
+            <li><a href="processes.html">Global Initiatives</a></li>
+            <li><a href="donations.html" class="active">Make a donation</a></li>
+            <li><a href="ewastemonitor.html" >Global E-waste Monitor 2024</a></li>
+        </ul>
+    </nav>
+    <div class="ha">
+    <div class="banner">
+        <p>Make a donation</p>
+    </div><br><br>
+    <div class="donation-box">
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Join us in making an impact.<br><br> Donate today and be a part of the solution.<br><br></p>
+        <p style="padding-top: 5px; padding-bottom: 5px; font-size: 10px;"><i>By donating, you help us expand our e-waste recycling programs and educate communities on responsible electronic use.</i></p>
+           <hr>
+        <div class="frequency-group" style="padding-top: 5px; padding-bottom: 5px;">
+            <label>Frequency:</label><br>
+            <button onclick="selectButton(this, 'frequency-group')">One time</button>
+            <button onclick="selectButton(this, 'frequency-group')">Monthly</button>
+        </div>
+        <div class="amount-group" style="margin-top: 10px;">
+            <label>Amount:</label><br>
+            <button onclick="selectButton(this, 'amount-group')">₹100.00</button>
+            <button onclick="selectButton(this, 'amount-group')">₹200.00</button>
+            <button onclick="selectButton(this, 'amount-group')">Other</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <label>Comment (optional)</label><br>
+            <textarea rows="2" style="width: 100%;"></textarea>
+        </div>
+        <button onclick="showWarning()">Donate</button>
+        <div id="warning-message" class="warning">
+            This website can't accept donations right now. Contact the site owner.
+        </div>
+    </div>
+    <br>
+    <div class="low">
+        <footer>
+            <h3>Contact Us</h3><br>
+            <p>6239980882</p>
+            <a href="info@Ewastesustainablesolutions.org">info@Ewastesustainablesolutions.org</a> 
+            <br><br>
+            <p>Phagwara,punjab</p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
